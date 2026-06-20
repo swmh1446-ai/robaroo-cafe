@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-luxury-ebony: #0F0907;
+  --color-luxury-cocoa: #1A120E;
+  --color-coffee-brown: #5C3D2E;
+  --color-coffee-cream: #F5E6D3;
+  --color-coffee-beige: #E8D5C4;
+  --color-luxury-gold: #D4A017;
+  --color-luxury-gold-dark: #B08112;
+  --color-warm-slate: #16100E;
+
+  --animate-kenburns: kenburns 24s ease-in-out infinite alternate;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s infinite linear;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes kenburns {
+    0% {
+      transform: scale(1.02) translate(0px, 0px);
+    }
+    100% {
+      transform: scale(1.1) translate(-10px, -5px);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+}
+
+/* Custom styles for luxury glassmorphism and subtle scrollbars */
+html {
+  scroll-behavior: smooth;
+  background-color: #0F0907;
+  color: #F5E6D3;
+}
+
+/* Glassmorphism utility for Sophisticated Dark cards */
+.glass-panel {
+  background: rgba(26, 18, 14, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(245, 230, 211, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 230, 211, 0.08);
+}
+
+/* Hide scrollbars for slick layouts */
+.slider-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+.slider-scrollbar::-webkit-scrollbar-track {
+  background: rgba(42, 27, 21, 0.2);
+}
+.slider-scrollbar::-webkit-scrollbar-thumb {
+  background: #D4A017;
+  border-radius: 9999px;
+}
+
+/* Base custom input stylings */
+input, select, textarea {
+  outline: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #D4A017;
+  box-shadow: 0 0 0 1px rgba(212, 160, 23, 0.3);
+}

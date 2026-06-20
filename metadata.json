@@ -1,0 +1,6 @@
+{
+  "name": "Roobaroo Cafe",
+  "description": "The premium luxury cafe in Hyderabad. Indulge in artisanal coffees, warm gourmet delights, and an exquisite aesthetic atmosphere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
